@@ -1,0 +1,22 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (]8;;file://myserver01/usr/lib/systemd/system/docker.service/usr/lib/systemd/system/docker.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Tue 2024-06-25 04:28:40 UTC; 1min 26s ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: ]8;;https://docs.docker.comhttps://docs.docker.com]8;;
+   Main PID: 2638 (dockerd)
+      Tasks: 11
+     Memory: 33.7M (peak: 34.5M)
+        CPU: 500ms
+     CGroup: /system.slice/docker.service
+             └─[0;38;5;245m2638 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock[0m
+
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.079715678Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.114462551Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.114678512Z" level=info msg="Loading containers: start."
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.451516159Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.519212274Z" level=info msg="Loading containers: done."
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.527996326Z" level=info msg="Docker daemon" commit=de5c9cf containerd-snapshotter=false storage-driver=overlay2 version=26.1.4
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.528040738Z" level=info msg="Daemon has completed initialization"
+Jun 25 04:28:40 myserver01 dockerd[2638]: time="2024-06-25T04:28:40.549615734Z" level=info msg="API listen on /run/docker.sock"
+Jun 25 04:28:40 myserver01 systemd[1]: Started docker.service - Docker Application Container Engine.
+Jun 25 04:28:57 myserver01 dockerd[2638]: time="2024-06-25T04:28:57.053946503Z" level=info msg="ignoring event" container=b4e57a3bb59a690b3e10feea0feeed7411cc969aa38611440146bcaf812986f0 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
